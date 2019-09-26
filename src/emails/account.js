@@ -12,15 +12,12 @@ const sendWelcomeEmail = (email, name) => {
 };
 
 const sendCancelationEmail = (email, name) => {
-  sgMail
-    .send({
-      to: email,
-      from: "adam.csaba.84@gmail.com",
-      subject: "We are sorry",
-      text: `Goodbye, ${name}.`
-    })
-    .then(res => console.log(res))
-    .catch(e => console.log(e.response.body));
+  sgMail.send({
+    to: email,
+    from: "adam.csaba.84@gmail.com",
+    subject: "We are sorry",
+    text: `Goodbye, ${name}.`
+  });
 };
 
 module.exports = {
